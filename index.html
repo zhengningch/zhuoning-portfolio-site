@@ -1,0 +1,238 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>擢宁｜个人作品展示</title>
+  <meta name="description" content="擢宁个人作品展示：AI与文学研究、古籍OCR、文言文教育平台与古籍校勘Agent。" />
+  <style>
+    :root {
+      --bg: #f6f7fb;
+      --card: #ffffff;
+      --text: #1f2937;
+      --muted: #6b7280;
+      --primary: #4f46e5;
+      --primary-soft: #eef2ff;
+      --border: #e5e7eb;
+      --shadow: 0 10px 30px rgba(15, 23, 42, 0.08);
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Hiragino Sans GB",
+        "Microsoft YaHei", "Segoe UI", sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.75;
+    }
+    .container { width: min(1100px, 92vw); margin: 0 auto; }
+    header {
+      background: linear-gradient(140deg, #312e81, #4338ca 55%, #6366f1);
+      color: #fff;
+      padding: 64px 0 56px;
+    }
+    .badge {
+      display: inline-block;
+      padding: 6px 12px;
+      border-radius: 999px;
+      font-size: 12px;
+      letter-spacing: 0.5px;
+      background: rgba(255, 255, 255, 0.16);
+      margin-bottom: 12px;
+    }
+    h1 { margin: 0 0 8px; font-size: clamp(34px, 6vw, 48px); line-height: 1.2; }
+    .subtitle { margin: 0; color: rgba(255, 255, 255, 0.9); }
+    .nav {
+      margin-top: 28px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+    .nav a {
+      text-decoration: none;
+      color: #fff;
+      border: 1px solid rgba(255, 255, 255, 0.35);
+      padding: 8px 12px;
+      border-radius: 10px;
+      font-size: 14px;
+    }
+    section { padding: 42px 0; }
+    h2 {
+      margin: 0 0 14px;
+      font-size: 28px;
+      line-height: 1.3;
+      color: #111827;
+    }
+    .lead {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-left: 4px solid var(--primary);
+      border-radius: 14px;
+      padding: 18px 20px;
+      box-shadow: var(--shadow);
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 18px;
+    }
+    .card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 18px;
+      box-shadow: var(--shadow);
+    }
+    .card h3 { margin: 0 0 8px; font-size: 20px; line-height: 1.4; }
+    .card p { margin: 8px 0; color: #374151; }
+    .tags { margin-top: 12px; display: flex; flex-wrap: wrap; gap: 8px; }
+    .tag {
+      font-size: 12px;
+      color: var(--primary);
+      background: var(--primary-soft);
+      padding: 4px 10px;
+      border-radius: 999px;
+    }
+    .timeline {
+      display: grid;
+      gap: 14px;
+      margin-top: 6px;
+    }
+    .step {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 14px 16px;
+    }
+    .step b { color: #111827; }
+    footer {
+      border-top: 1px solid var(--border);
+      color: var(--muted);
+      text-align: center;
+      padding: 28px 0 36px;
+      font-size: 14px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <span class="badge">AI × 文学 × 古籍</span>
+      <h1>擢宁｜个人作品展示</h1>
+      <p class="subtitle">中山大学 · 研一 · 中国古代文学 · ningzhuozr@163.com</p>
+      <nav class="nav">
+        <a href="#focus">问题意识</a>
+        <a href="#project1">项目1</a>
+        <a href="#project2">项目2</a>
+        <a href="#project3">项目3</a>
+        <a href="#project4">项目4</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section id="focus">
+      <h2>关注的问题脉络｜AI &amp; 文学</h2>
+      <div class="lead">
+        如果 AI 正在通过语言形式理解复杂语义、并逐步参与未来知识结构的塑造，
+        人文学者就有责任参与其边界定义：监测 AI 对文学的理解能力、推动其继承文学遗产、
+        并持续检验“文学是人学”这一方向是否在技术演进中得到深化。
+      </div>
+    </section>
+
+    <section id="project1">
+      <h2>项目1｜基础设施：BERT模型视角下的中古诗风嬗变研究</h2>
+      <div class="card">
+        <p>
+          基于 SikuBERT + Triplet Loss 微调，构建诗人风格向量；通过余弦相似度和 K-means 聚类，
+          对曹操至陈叔宝等 68 位作者进行风格分群。结果显示，模型在不依赖文史常识的情况下，
+          仍能产出与文学史经验高度一致的结构，并为陶渊明体来源、阴铿与何逊诗风比较等经典问题提供补充解释。
+        </p>
+        <div class="tags">
+          <span class="tag">SikuBERT</span>
+          <span class="tag">Triplet Loss</span>
+          <span class="tag">K-means</span>
+          <span class="tag">诗歌风格量化</span>
+        </div>
+      </div>
+    </section>
+
+    <section id="project2">
+      <h2>项目2｜基础设施：符合真实世界的古籍OCR</h2>
+      <div class="card">
+        <p>
+          面向复杂版式古籍文档，提出“合成古籍图像数据”方案，构建 20000+ 训练集；
+          同时基于版本学知识搭建 SongPanda-Bench（100+ 古籍来源、356 张图像）。
+          在小规模对比实验中验证了合成数据与真实数据近似效能，并以 Qwen2.5-VL-7B + LoRA
+          训练 SongPanda，达到领域 SOTA 表现。
+        </p>
+        <div class="tags">
+          <span class="tag">Document Understanding</span>
+          <span class="tag">SongPanda-Bench</span>
+          <span class="tag">Qwen2.5-VL-7B</span>
+          <span class="tag">LoRA</span>
+        </div>
+      </div>
+    </section>
+
+    <section id="project3">
+      <h2>项目3｜落地：“将无同” &amp; “桃源学境”</h2>
+      <div class="grid">
+        <article class="card">
+          <h3>平台定位</h3>
+          <p>
+            面向中学生的文言文情境化学习平台，连接“素质拓展 + 应试提分”，
+            目标是让每位学生获得接近高水平名师助教的支持。
+          </p>
+        </article>
+        <article class="card">
+          <h3>方法与质量控制</h3>
+          <p>
+            核心采用 Prompt Engineering + RAG，并由专家构建古汉语字典与考情分析数据集，
+            降低模型幻觉风险。围绕 OCR、标注、考试、范文四环节开展系统评测与迭代。
+          </p>
+        </article>
+        <article class="card">
+          <h3>教育实验结果</h3>
+          <p>
+            在 78 名中学生被试内对照实验中，相比传统纸质材料，
+            AI 情境化平台显著提升即时学习效率，并在一周后后测中表现出更高记忆保持水平。
+          </p>
+        </article>
+      </div>
+
+      <div class="timeline" style="margin-top:18px;">
+        <div class="step"><b>学习环节：</b>拍照上传题目或随机选文，系统完成分句注释、考题生成、考情分析及图像视频扩展。</div>
+        <div class="step"><b>复习环节：</b>学生可自定义情境，动态生成文言文练习题并记录学习表现。</div>
+        <div class="step"><b>摘抄环节：</b>支持好词好句沉淀，并一键转换为高考议论文语境下的可用表达。</div>
+        <div class="step"><b>伴学环节：</b>可随时划线提问 AI 宠物，错题自动归档并生成复习卡片。</div>
+      </div>
+    </section>
+
+    <section id="project4">
+      <h2>项目4｜正在施工：订书机_古籍自动校勘Agent</h2>
+      <div class="card">
+        <p>
+          “订书机”是一个基于 LangChain + LangGraph 的多智能体校勘系统，
+          目标是完成从异文发现、证据检索到校勘记定稿的全流程自动化。
+          系统包含异体字初筛、深度推理、引文核查与标签化输出机制，以控制专业场景下的模型幻觉风险。
+        </p>
+        <p>
+          在中山大学相关研究生课程的初测中，该系统在与 19 名古代文学/文献学研究生的同题作业比较中，
+          得分达到班级中位数，表现出接近专业研究生的校勘能力。
+        </p>
+        <div class="tags">
+          <span class="tag">LangGraph</span>
+          <span class="tag">多智能体</span>
+          <span class="tag">文献校勘</span>
+          <span class="tag">幻觉控制协议</span>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    © 2026 擢宁 · 个人作品展示 | Contact: ningzhuozr@163.com
+  </footer>
+</body>
+</html>
